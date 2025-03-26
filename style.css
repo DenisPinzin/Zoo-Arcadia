@@ -66,3 +66,98 @@ nav {
     padding-right: 1rem;
   }
 }
+
+/*----- MAIN -----*/
+/*----- SECTION 1 -----*/
+
+/* Position fixe de la navbar au-dessus */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(90, 62, 54, 0.85); /* même couleur que ta navbar, semi-transparente */
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('img/Background-Accueil.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* important pour masquer l'overlay si besoin */
+  z-index: 0;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* ← ajuste l'opacité ici */
+  z-index: 0;
+}
+
+
+
+/* Titre principal */
+.hero-title {
+  position: relative;
+  font-family: 'Playfair Display SC', serif;
+  font-size: clamp(2rem, 6vw, 64px);
+  font-weight: 400;
+  color: #5A3E36;
+  letter-spacing: 0;
+  text-align: center;
+  z-index: 1;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero-title::before {
+  content: "Bienvenue sur Arcadia";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  color: #F5F5DC;
+  -webkit-text-stroke: 3px #F5F5DC;
+  filter: blur(0.5px);
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 64px);
+}
+
+.hero-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 24px);
+  line-height: 1.7;
+  color: #5A3E36;
+  text-align: center;
+  max-width: 85%;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+
+  text-shadow:
+    0 0 1px #F5F5DC,
+    1px 1px 1px #F5F5DC,
+    -1px -1px 1px #F5F5DC,
+    1px -1px 1px #F5F5DC,
+    -1px 1px 1px #F5F5DC;
+}
+
+
+
+
+
