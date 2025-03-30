@@ -13,6 +13,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  padding: 0;
 }
 
 .navbar-toggler {
@@ -20,8 +21,9 @@
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
 
 .navbar-toggler:focus {
   outline: none;
@@ -42,7 +44,6 @@
   .mobile-separator {
     width: 60%;
     margin: 0.5rem auto;
-    border: none;
     border-top: 1.5px solid white;
     opacity: 1;
   }
@@ -53,8 +54,7 @@
 
   .navbar-nav .nav-link {
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1rem;
   }
 }
 
@@ -62,12 +62,8 @@
 .hero-section {
   position: relative;
   min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 40px;
-  background-image: url('img/Background-Accueil.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 120px 0 40px;
+  background: url('img/Background-Accueil.webp') center/cover no-repeat;
   overflow: hidden;
   z-index: 0;
 }
@@ -75,10 +71,7 @@
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
@@ -90,7 +83,6 @@
   gap: 1.5rem;
 }
 
-/* TITRE */
 .hero-title {
   position: relative;
   font-family: 'Playfair Display SC', serif;
@@ -98,27 +90,23 @@
   font-weight: 400;
   color: #5A3E36;
   text-align: center;
-  z-index: 1;
   max-width: 90%;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .hero-title::before {
   content: "Bienvenue sur Arcadia";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  inset: 0;
+  margin: auto;
   z-index: -1;
   color: #F5F5DC;
   -webkit-text-stroke: 3px #F5F5DC;
   filter: blur(0.5px);
   text-align: center;
-  font-size: inherit;
 }
 
-/* PARAGRAPHE */
 .hero-text {
   font-family: 'Roboto', sans-serif;
   font-size: clamp(1rem, 2.5vw, 24px);
@@ -128,17 +116,11 @@
   max-width: 85%;
   margin: 1.5rem auto 0;
   padding: 0 1rem;
-  position: relative;
   z-index: 1;
-  text-shadow:
-    0 0 1px #F5F5DC,
-    1px 1px 1px #F5F5DC,
-    -1px -1px 1px #F5F5DC,
-    1px -1px 1px #F5F5DC,
-    -1px 1px 1px #F5F5DC;
+  text-shadow: 0 0 1px #F5F5DC, 1px 1px 1px #F5F5DC, -1px -1px 1px #F5F5DC;
 }
 
-/* XS Portrait */
+/* Responsive Hero tweaks */
 @media (max-width: 576px) {
   .hero-section {
     padding-top: 140px;
@@ -146,14 +128,12 @@
   }
 }
 
-/* Landscape */
 @media (max-width: 768px) and (orientation: landscape) {
   .hero-title {
     font-size: clamp(1.5rem, 4.5vw, 2.2rem);
   }
 
   .hero-title::before {
-    font-size: inherit;
     -webkit-text-stroke: 1px #F5F5DC;
     filter: blur(0.2px);
   }
@@ -167,5 +147,220 @@
   .hero-section {
     padding-top: 100px;
     padding-bottom: 20px;
+  }
+}
+
+/* SECTION DISCOVERY */
+.section-discovery {
+  background-color: #5A3E36;
+  padding: 2rem 0;
+}
+
+.section-discovery .container {
+  max-width: 90%;
+}
+
+.section-discovery .row {
+  height: 100%;
+}
+
+.section-discovery .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-discovery .col-md-6.d-flex > article {
+  flex: 0 1 48%;
+  padding: 1rem;
+}
+
+.section-discovery .col-md-6:last-child article {
+  flex: 1;
+  padding: 1rem;
+}
+
+.section-discovery article {
+  background-color: #F5F5DC !important;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-discovery h2 {
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #5A3E36;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.section-discovery p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #5A3E36;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* IMAGES DESKTOP */
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.service-img-vertical {
+  width: 100%;
+  height: 85%;
+  aspect-ratio: 4 / 1.5;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* HIDE OTHER IMAGES BY DEFAULT */
+.service-img-vertical:not(:first-of-type),
+.gallery-img:not(:first-child) {
+  display: none !important;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+
+  .section-discovery article {
+    width: 90%;               /* ✅ limite la largeur */
+    max-width: 600px;
+    margin: 0 auto 2rem auto; /* ✅ centre avec auto sur les côtés */
+    padding: 1rem;
+    text-align: center;       /* optionnel, utile si tu veux centrer le texte */
+  }
+
+  .section-discovery h2,
+  .section-discovery p {
+    text-align: center;       /* ✅ centrage du texte aussi */
+  }
+
+
+    /* Ne garder que la première image dans chaque bloc */
+    .section-discovery .row.g-2 .col-4:not(:first-child),
+    .service-img-vertical:not(:first-of-type) 
+    .mask{
+      display: none !important;
+    }
+
+  .mask {
+    display: none;
+  }
+.train {
+  justify-self: center;
+  aspect-ratio: 1 / 1;
+  width: 75%;
+}
+.zebre {
+  aspect-ratio: 1 / 1;
+  width: 75%;
+}
+.mangrove {
+  aspect-ratio: 1 / 1;
+  width: 75%;
+}
+}
+
+/*AVIS*/
+
+.avis-bg {
+  background-color: #5A3E36;
+
+}
+
+/* SECTION AVIS */
+.section-avis {
+  background-color: #f5f5dc;
+  padding: 2rem 0;
+}
+
+.avis-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: #5A3E36;
+  color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+
+}
+
+.avis-title {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 2rem;
+}
+
+.avis-intro {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5f5dc;
+}
+
+.avis-item p {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+.avis-box {
+  background-color: #f5f5dc;
+  color: #5A3E36;
+  padding: 1.5rem;
+  border-radius: 1rem; /* ou rounded-4 */
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #5A3E36 #f5f5dc;
+}
+
+/* Pour WebKit (Chrome, Edge, Safari) */
+.avis-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.avis-box::-webkit-scrollbar-thumb {
+  background-color: #5A3E36;
+  border-radius: 10px;
+}
+
+.avis-box::-webkit-scrollbar-track {
+  background: #f5f5dc;
+}
+
+.section-avis h2 {
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #F5F5DC;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.section-avis p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Pour limiter la largeur sur mobile */
+@media (max-width: 768px) {
+  .avis-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
   }
 }

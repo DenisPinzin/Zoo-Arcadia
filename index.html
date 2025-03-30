@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Nom de l'auteur" />
-  <meta name="robots" content="index, follow" />
-  <title>Document</title>
+  <title>Arcadia</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
@@ -13,20 +11,16 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
-        <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img src="img/logo.png" alt="Logo Arcadia" height="60">
         </a>
-
-        <!-- Burger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Menu -->
         <div class="collapse navbar-collapse" id="menuNavbar">
           <ul class="navbar-nav ms-auto mb-2 mb-md-0 w-100 justify-content-evenly">
             <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
@@ -44,6 +38,7 @@
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <main>
     <section class="hero-section d-flex align-items-center justify-content-center text-center">
       <div class="container">
@@ -58,9 +53,126 @@
         </div>
       </div>
     </section>
+
+    <!-- DISCOVERY SECTION -->
+    <section class="section-discovery">
+      <div class="container h-100">
+        <div class="row h-100">
+
+          <!-- COLONNE GAUCHE -->
+          <div class="col-md-6 d-flex flex-column justify-content-between pe-md-4">
+
+            <!-- HABITATS -->
+            <article class="p-4 rounded-4 bg-light flex-fill mb-3 d-flex flex-column">
+              <h2>Habitats</h2>
+              <p>
+                Arcadia vous invite à découvrir une variété d'habitats immersifs, chacun conçu pour reproduire les conditions naturelles des espèces qui y vivent. 
+                Explorez notre savane africaine, où vivent les lions et les girafes, notre jungle tropicale abritant une flore et une faune exotiques, ainsi que notre marais humide, maison de nombreuses espèces aquatiques et de petits mammifères. Chaque habitat est soigneusement aménagé pour offrir aux animaux un environnement adapté tout en permettant aux visiteurs de les observer de manière interactive.
+              </p>
+              <div class="row mt-3 g-2 d-flex justify-content-center">
+                <div class="col-4 mangrove"><img src="img/mangrove.jpg" alt="Mangrove" class="img-fluid gallery-img"></div>
+                <div class="col-4"><img src="img/south-africa-3764677_1280.jpg" alt="Savane" class="img-fluid gallery-img"></div>
+                <div class="col-4"><img src="img/jungle-1807476_1280.jpg" alt="Jungle" class="img-fluid gallery-img"></div>
+              </div>
+            </article>
+
+            <!-- ANIMAUX -->
+            <article class="p-4 rounded-4 bg-light flex-fill mt-3 d-flex flex-column">
+              <h2>Animaux</h2>
+              <p>
+                Le zoo Arcadia abrite une large variété d'animaux, des majestueux lions de la savane aux colorés oiseaux tropicaux. Chaque animal bénéficie de soins attentifs et d’un habitat adapté à ses besoins. Nos programmes de conservation visent à protéger les espèces menacées et à sensibiliser le public aux enjeux de la préservation de la biodiversité à travers des rencontres pédagogiques.
+               </p>
+              <div class="row mt-3 g-2 d-flex justify-content-center">
+                <div class="col-4 zebre"><img src="img/Esmé.jpg" alt="Tigre" class="img-fluid gallery-img"></div>
+                <div class="col-4"><img src="img/héron.jpg" alt="Héron" class="img-fluid gallery-img"></div>
+                <div class="col-4"><img src="img/capuchin-monkey-8530884_1280.jpg" alt="Singe capucin" class="img-fluid gallery-img"></div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- COLONNE DROITE -->
+          <div class="col-md-6 d-flex">
+            <article class="p-4 rounded-4 bg-light flex-fill d-flex flex-column">
+              <h2>Services</h2>
+              <p>
+                Arcadia propose une gamme de services pour rendre votre visite agréable et enrichissante. Profitez de notre restaurant écologique qui propose des produits locaux dans un cadre naturel. Pour une expérience plus immersive, nous offrons une visite guidée gratuite, animée par nos experts, qui vous plongeront dans l’univers fascinant des animaux et de leurs environnements. Vous pouvez également découvrir le zoo de manière originale avec notre petit train qui vous permettra de visiter les différentes zones tout en profitant d’un trajet agréable.
+              </p>
+              <div class="row mt-3 g-2 d-flex flex-column">
+                <div class="col"><img src="img/toyTrain.jpg" alt="Petit train" class="service-img-vertical train"></div>
+                <div class="col mask"><img src="img/pizza.jpg" alt="Repas écologique" class="service-img-vertical"></div>
+                <div class="col mask"><img src="img/guide.jpg" alt="Visite guidée" class="service-img-vertical"></div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--AVIS-->
+<section class="section-avis py-5 d-flex justify-content-center ">
+  <div class="container-fluid avis-container rounded-5 p-4 ms-4 me-4">
+    <h2 class="avis-title mb-3">Avis</h2>
+    <p class="avis-intro">
+      Chez Arcadia, nous attachons une grande importance à vos retours. Vos avis nous aident à améliorer constamment nos services et à offrir une expérience encore plus enrichissante.
+      Partagez vos impressions, vos moments favoris et vos suggestions. Chaque commentaire compte pour nous et nous permet de mieux répondre à vos attentes. N’hésitez pas à laisser votre avis en quelques mots.
+    </p>
+    <div class="text-center my-4">
+      <button class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalAvis">
+        Laisser un avis
+      </button>
+      
+    </div>
+
+    <div class="avis-box bg-light rounded-4 p-3">
+      <div class="avis-item border-bottom pb-3 mb-3">
+        <strong>Megadrive2080</strong>
+        <p class="mb-0">Très beau zoo, ma femme zozo la trouvé très zolie!</p>
+      </div>
+      <div class="avis-item border-bottom pb-3 mb-3">
+        <strong>Shadowexe</strong>
+        <p class="mb-0">On voit que les animaux sont bien traités.</p>
+      </div>
+      <div class="avis-item">
+        <strong>Duriel</strong>
+        <p class="mb-0">Rien à redire et le service excellent!</p>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="modalAvis" tabindex="-1" aria-labelledby="modalAvisLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAvisLabel">Laisser un avis</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formAvis">
+            <div class="mb-3">
+              <label for="pseudo" class="form-label">Pseudo</label>
+              <input type="text" class="form-control" id="pseudo" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Votre avis</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+  
 </body>
 </html>
