@@ -364,3 +364,37 @@
     margin: 0 auto;
   }
 }
+
+.footer-section {
+  background-color: #5A3E36;
+}
+
+.footer-link {
+  color: #f5f5dc;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-section h5 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section i {
+  color: #f5f5dc;
+  transition: color 0.2s;
+}
+
+.footer-section i:hover {
+  color: #ffffff;
+}
