@@ -24,14 +24,13 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-
 .navbar-toggler:focus {
   outline: none;
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
 }
 
 .navbar-nav .nav-link {
-  font-family: 'Playfair Display SC', serif;
+  font-family: "Playfair Display SC", serif;
 }
 
 .navbar-nav .nav-link.active {
@@ -39,49 +38,112 @@
   text-underline-offset: 4px;
 }
 
-/*Hero Habitats*/
+
+/*HERO HABITATS*/
 
 .hero-habitats {
-  background-color: #f5f5dc; /* Beige doux */
-  min-height: 94vh;
-  padding: 4rem 0;
+  background-color: #f5f5dc;
+  margin-top: 4rem;
+  height: 51rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .hero-habitat-title {
-  font-family: 'Playfair Display SC', serif;
+  height: 45%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Playfair Display SC", serif;
   font-size: 4rem;
-  color: #5A3E36;
-  margin-bottom: 1rem;
+  color: #5a3e36;
 }
 
 .hero-habitat-text {
-  font-family: 'Roboto', sans-serif;
+  height: 55%;
+  font-family: "Roboto", sans-serif;
+  text-align: start;
+  line-height: 1.8;
   font-size: 1.5rem;
-  color: #5A3E36;
-  line-height: 2;
-  width: 85%;
-  margin: 0;
+  color: #5a3e36;
 }
 
-.hero-habitat-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
+
   .hero-habitats {
-    text-align: center;
-    padding: 3rem 1.5rem;
+    background-color: #f5f5dc;
+    margin-top: 4rem;
+    height: 100%;
   }
 
-  .hero-habitat-title {
-    font-size: 2rem;
+  .hero-content {
+    display:flex ;
+    flex-direction:column-reverse ;
+    align-items: center ;
+    width: 100%;
   }
 
   .hero-habitat-text {
-    font-size: 1rem;
-    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .hero-habitat-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-self: center;
+    text-align: center;
+    font-size: 3rem;
   }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+
+  .hero-habitats {
+    background-color: #f5f5dc;
+    margin-top: 4rem;
+    height: 100%;
+  }
+
+  .hero-content {
+    display:flex ;
+    flex-direction:column ;
+    align-items: center ;
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 25%;
+    height: 25%;
+  }
+
+  .hero-habitat-text {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .hero-habitat-title {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    align-self: center;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .nav-link {
+   padding-top: 0;
+   padding-bottom: 0.2rem;
+  }
+}
